@@ -38,12 +38,24 @@ describe('Acesso a página do bugbank', () => {
         cy.get('#btnCloseModal').click();
     });
 
-    it('CT07 - Tentativa de Transferência com saldo insuficiente', () => {
-        
+    it.only('CT07 - Tentativa de Transferência com saldo insuficiente', () => {
+        cy.get('#btn-TRANSFERÊNCIA').click();
+        cy.get(':nth-child(1) > .input__default').type('344');
+        cy.get('.account__data > :nth-child(2) > .input__default').type('9');
+        cy.get('.styles__ContainerFormTransfer-sc-1oow0wh-0 > :nth-child(2) > .input__default').type('2000');
+        cy.get(':nth-child(3) > .input__default').type('despesa alimentação');
+        cy.get('.style__ContainerButton-sc-1wsixal-0').click(); 
+        cy.get('#modalText').contains('Você não tem saldo suficiente para essa transação').should('exist');
+        cy.get('#btnCloseModal').click();
     });
 
     it('CT10 - Transferência para uma conta válida, realizada com sucesso', () => {
-        
+        cy.get('#btn-TRANSFERÊNCIA').click();
+        cy.get(':nth-child(1) > .input__default').type('294');
+        cy.get('.account__data > :nth-child(2) > .input__default').type('9');
+        cy.get('.styles__ContainerFormTransfer-sc-1oow0wh-0 > :nth-child(2) > .input__default').type('50');
+        cy.get(':nth-child(3) > .input__default').type('despesa alimentação');
+        cy.get('.style__ContainerButton-sc-1wsixal-0').click(); 
     });
 
 });
