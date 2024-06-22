@@ -38,7 +38,7 @@ describe('Acesso a página do bugbank', () => {
         cy.get('#btnCloseModal').click();
     });
 
-    it.only('CT07 - Tentativa de Transferência com saldo insuficiente', () => {
+    it('CT07 - Tentativa de Transferência com saldo insuficiente', () => {
         cy.get('#btn-TRANSFERÊNCIA').click();
         cy.get(':nth-child(1) > .input__default').type('344');
         cy.get('.account__data > :nth-child(2) > .input__default').type('9');

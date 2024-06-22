@@ -4,7 +4,7 @@ describe('Acesso a página do bugbank', () => {
     const credentials = require('../fixtures/credentials.json');
 
     // Antes de todos os testes, realizar o login válido
-    before(() => {
+    beforeEach(() => {
         cy.visit('/');
         cy.wait(2000);
 
@@ -43,7 +43,7 @@ describe('Acesso a página do bugbank', () => {
         cy.get('.styles__ContainerCloseButton-sc-8zteav-2 > a').click();
     });
 
-    it.only('CT14 - Realizar o logout com sucesso', () => {
+    it('CT14 - Realizar o logout com sucesso', () => {
         cy.get('#btnExit').click();
         cy.url().should('eq', 'https://bugbank.netlify.app/');
     });

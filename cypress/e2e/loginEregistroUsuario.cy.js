@@ -76,7 +76,7 @@ describe('Acesso a página do bugbank', () => {
         cy.get('#btnCloseModal').click();
     })
 
-    it.only('CT08 - Login realizado com sucesso, preenchendo todos os campos obrigatórios', () => {
+    it('CT08 - Login realizado com sucesso, preenchendo todos os campos obrigatórios', () => {
         cy.get('.ihdmxA').click();
         cy.wait(1000);
         cy.get('input[placeholder="Informe seu e-mail"]').eq(1).type(credentials.email, { force: true });
