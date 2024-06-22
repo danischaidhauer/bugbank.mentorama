@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-22T16:56:45.256Z",
+    "end": "2024-06-22T16:57:18.130Z",
+    "duration": 32874,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f52355f7-594d-40d7-95d5-f6013e2e55ce",
+      "title": "",
+      "fullFile": "cypress\\e2e\\usabilidade.cy.js",
+      "file": "cypress\\e2e\\usabilidade.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "40a832cc-7fb4-41e7-98d5-e24b7fd49351",
+          "title": "Acesso a página do bugbank",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "CT11 - Verificar a funcionalidade do botão \"Extrato\"",
+              "fullTitle": "Acesso a página do bugbank CT11 - Verificar a funcionalidade do botão \"Extrato\"",
+              "timedOut": null,
+              "duration": 8807,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#btn-EXTRATO').click();\ncy.get('.bank-statement__ContainerTransactions-sc-7n8vh8-8').should('exist');\ncy.url().should('eq', 'https://bugbank.netlify.app/bank-statement');",
+              "err": {},
+              "uuid": "e273e4f7-b741-4160-834d-af8cfe440867",
+              "parentUUID": "40a832cc-7fb4-41e7-98d5-e24b7fd49351",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT12 - Verificar a funcionalidade do botão \"Pagamento\"",
+              "fullTitle": "Acesso a página do bugbank CT12 - Verificar a funcionalidade do botão \"Pagamento\"",
+              "timedOut": null,
+              "duration": 7601,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#btn-PAGAMENTOS').click();\ncy.get('.styles__ContainerContent-sc-8zteav-1').contains('Funcionalidade em desenvolvimento').should('be.visible');",
+              "err": {},
+              "uuid": "4b38cc51-6392-4800-afd4-74eab4658202",
+              "parentUUID": "40a832cc-7fb4-41e7-98d5-e24b7fd49351",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT13 - Verificar a funcionalidade do botão \"Saque\"",
+              "fullTitle": "Acesso a página do bugbank CT13 - Verificar a funcionalidade do botão \"Saque\"",
+              "timedOut": null,
+              "duration": 8490,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#btn-SAQUE').click();\ncy.get('.styles__ContainerContent-sc-8zteav-1').contains('Funcionalidade em desenvolvimento').should('be.visible');\ncy.get('.styles__ContainerCloseButton-sc-8zteav-2 > a').click();",
+              "err": {},
+              "uuid": "f1bf697f-aafa-4f0e-8583-583ffaf35f79",
+              "parentUUID": "40a832cc-7fb4-41e7-98d5-e24b7fd49351",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT14 - Realizar o logout com sucesso",
+              "fullTitle": "Acesso a página do bugbank CT14 - Realizar o logout com sucesso",
+              "timedOut": null,
+              "duration": 7794,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#btnExit').click();\ncy.url().should('eq', 'https://bugbank.netlify.app/');",
+              "err": {},
+              "uuid": "fcd59f90-600c-4e6d-bc22-eb16cd0990b3",
+              "parentUUID": "40a832cc-7fb4-41e7-98d5-e24b7fd49351",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e273e4f7-b741-4160-834d-af8cfe440867",
+            "4b38cc51-6392-4800-afd4-74eab4658202",
+            "f1bf697f-aafa-4f0e-8583-583ffaf35f79",
+            "fcd59f90-600c-4e6d-bc22-eb16cd0990b3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32692,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterDir": "cypress/reports/mochawesome-reporter",
+        "overwrite": true,
+        "html": true,
+        "video": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
