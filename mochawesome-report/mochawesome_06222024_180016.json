@@ -1,0 +1,154 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-06-22T17:00:04.654Z",
+    "end": "2024-06-22T17:00:16.917Z",
+    "duration": 12263,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "214b55a2-de83-4ba3-b796-964d684ff368",
+      "title": "",
+      "fullFile": "cypress\\e2e\\transferenciasBancarias.cy.js",
+      "file": "cypress\\e2e\\transferenciasBancarias.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "12020309-64db-4f73-ade7-a5c7b54684d7",
+          "title": "Acesso a página do bugbank",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "CT06 - Tentativa de Transferência para conta inválida",
+              "fullTitle": "Acesso a página do bugbank CT06 - Tentativa de Transferência para conta inválida",
+              "timedOut": null,
+              "duration": 9770,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#btn-TRANSFERÊNCIA').click();\ncy.get(':nth-child(1) > .input__default').type('344');\ncy.get('.account__data > :nth-child(2) > .input__default').type('0');\ncy.get('.styles__ContainerFormTransfer-sc-1oow0wh-0 > :nth-child(2) > .input__default').type('50');\ncy.get(':nth-child(3) > .input__default').type('despesa alimentação');\ncy.get('.style__ContainerButton-sc-1wsixal-0').click();\ncy.get('#modalText').contains('Conta inválida ou inexistente').should('exist');\ncy.get('#btnCloseModal').click();",
+              "err": {},
+              "uuid": "6f008ed3-b6bc-4cbe-9b25-f4ea527e5e50",
+              "parentUUID": "12020309-64db-4f73-ade7-a5c7b54684d7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT07 - Tentativa de Transferência com saldo insuficiente",
+              "fullTitle": "Acesso a página do bugbank CT07 - Tentativa de Transferência com saldo insuficiente",
+              "timedOut": null,
+              "duration": 1193,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#btn-TRANSFERÊNCIA').click();\ncy.get(':nth-child(1) > .input__default').type('344');\ncy.get('.account__data > :nth-child(2) > .input__default').type('9');\ncy.get('.styles__ContainerFormTransfer-sc-1oow0wh-0 > :nth-child(2) > .input__default').type('2000');\ncy.get(':nth-child(3) > .input__default').type('despesa alimentação');\ncy.get('.style__ContainerButton-sc-1wsixal-0').click();\ncy.get('#modalText').contains('Você não tem saldo suficiente para essa transação').should('exist');\ncy.get('#btnCloseModal').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `#btn-TRANSFERÊNCIA`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `#btn-TRANSFERÊNCIA`, but never found it.\n    at Context.eval (webpack://bugbank/./cypress/e2e/transferenciasBancarias.cy.js:42:11)",
+                "diff": null
+              },
+              "uuid": "e1352c5f-10ee-4a06-a2eb-8d221df82643",
+              "parentUUID": "12020309-64db-4f73-ade7-a5c7b54684d7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT10 - Transferência para uma conta válida, realizada com sucesso",
+              "fullTitle": "Acesso a página do bugbank CT10 - Transferência para uma conta válida, realizada com sucesso",
+              "timedOut": null,
+              "duration": 1195,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#btn-TRANSFERÊNCIA').click();\ncy.get(':nth-child(1) > .input__default').type('294');\ncy.get('.account__data > :nth-child(2) > .input__default').type('9');\ncy.get('.styles__ContainerFormTransfer-sc-1oow0wh-0 > :nth-child(2) > .input__default').type('50');\ncy.get(':nth-child(3) > .input__default').type('despesa alimentação');\ncy.get('.style__ContainerButton-sc-1wsixal-0').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `#btn-TRANSFERÊNCIA`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 1000ms: Expected to find element: `#btn-TRANSFERÊNCIA`, but never found it.\n    at Context.eval (webpack://bugbank/./cypress/e2e/transferenciasBancarias.cy.js:53:11)",
+                "diff": null
+              },
+              "uuid": "d867a8bc-28b3-4ac2-96e2-078d3c25465e",
+              "parentUUID": "12020309-64db-4f73-ade7-a5c7b54684d7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6f008ed3-b6bc-4cbe-9b25-f4ea527e5e50"
+          ],
+          "failures": [
+            "e1352c5f-10ee-4a06-a2eb-8d221df82643",
+            "d867a8bc-28b3-4ac2-96e2-078d3c25465e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12158,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterDir": "cypress/reports/mochawesome-reporter",
+        "overwrite": true,
+        "html": true,
+        "video": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

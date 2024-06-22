@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-22T16:59:20.211Z",
+    "end": "2024-06-22T17:00:03.036Z",
+    "duration": 42825,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "68d29630-fe61-479d-b41b-879c0a265714",
+      "title": "",
+      "fullFile": "cypress\\e2e\\loginEregistroUsuario.cy.js",
+      "file": "cypress\\e2e\\loginEregistroUsuario.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "67ebf603-3549-431f-a99b-d2e7e0014979",
+          "title": "Acesso a página do bugbank",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "CT01 - Tentativa de Login sem preencher campos obrigatórios",
+              "fullTitle": "Acesso a página do bugbank CT01 - Tentativa de Login sem preencher campos obrigatórios",
+              "timedOut": null,
+              "duration": 4115,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > :nth-child(1) > .input__default').type('danisilveiratestes@yopmail.com');\ncy.get('.otUnI').click();\ncy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > .login__password > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__warging').should('exist');",
+              "err": {},
+              "uuid": "6ec838ba-0692-443e-a100-3fc873cb0886",
+              "parentUUID": "67ebf603-3549-431f-a99b-d2e7e0014979",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT02 - Tentativa de Login com informações de usuário inválidas",
+              "fullTitle": "Acesso a página do bugbank CT02 - Tentativa de Login com informações de usuário inválidas",
+              "timedOut": null,
+              "duration": 4403,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > :nth-child(1) > .input__default').type('danisilveiratestes@yopmail.com');\ncy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > .login__password > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type('54654654654');\ncy.get('.otUnI').click();\ncy.wait(1000);\ncy.xpath('/html/body/div/div/div[3]/div').should('be.visible');",
+              "err": {},
+              "uuid": "3f02bb36-f6aa-40c1-ba93-ba27647e908f",
+              "parentUUID": "67ebf603-3549-431f-a99b-d2e7e0014979",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT03 - Tentativa de Cadastro sem preencher campos obrigatórios",
+              "fullTitle": "Acesso a página do bugbank CT03 - Tentativa de Cadastro sem preencher campos obrigatórios",
+              "timedOut": null,
+              "duration": 5756,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.ihdmxA').click();\ncy.wait(1000);\ncy.get('input[placeholder=\"Informe seu e-mail\"]').eq(1).type(credentials.email, {\n  force: true\n});\ncy.get('input[placeholder=\"Informe seu Nome\"]').type('Danielle', {\n  force: true\n});\ncy.wait(1000);\ncy.get(':nth-child(4) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(credentials.password, {\n  force: true\n});\ncy.get('#toggleAddBalance').click({\n  force: true\n});\ncy.get('button[class=\"style__ContainerButton-sc-1wsixal-0 CMabB button__child\"]').click({\n  force: true\n});\ncy.get(':nth-child(5) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__warging').should('exist');",
+              "err": {},
+              "uuid": "93cb3730-2344-4f7f-bad0-eb97d4f81e2c",
+              "parentUUID": "67ebf603-3549-431f-a99b-d2e7e0014979",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT04 - Tentativa de Cadastro com senhas diferentes",
+              "fullTitle": "Acesso a página do bugbank CT04 - Tentativa de Cadastro com senhas diferentes",
+              "timedOut": null,
+              "duration": 6602,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.ihdmxA').click();\ncy.wait(1000);\ncy.get('input[placeholder=\"Informe seu e-mail\"]').eq(1).type(credentials.email, {\n  force: true\n});\ncy.get('input[placeholder=\"Informe seu Nome\"]').type('Danielle', {\n  force: true\n});\ncy.wait(1000);\ncy.get(':nth-child(4) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(credentials.password, {\n  force: true\n});\ncy.get(':nth-child(5) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type('sadasd564654654', {\n  force: true\n});\ncy.get('#toggleAddBalance').click({\n  force: true\n});\ncy.get('button[class=\"style__ContainerButton-sc-1wsixal-0 CMabB button__child\"]').click({\n  force: true\n});\ncy.get('p[id=\"modalText\"]').contains('As senhas não são iguais.').should('be.visible');",
+              "err": {},
+              "uuid": "21949527-b8bb-444c-b45c-a31e3692f64c",
+              "parentUUID": "67ebf603-3549-431f-a99b-d2e7e0014979",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT05 - Tentativa de Cadastro com e-mail inválido",
+              "fullTitle": "Acesso a página do bugbank CT05 - Tentativa de Cadastro com e-mail inválido",
+              "timedOut": null,
+              "duration": 6334,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.ihdmxA').click();\ncy.wait(1000);\ncy.get('input[placeholder=\"Informe seu e-mail\"]').eq(1).type('sadsadasdasd', {\n  force: true\n});\ncy.get('input[placeholder=\"Informe seu Nome\"]').type('Danielle', {\n  force: true\n});\ncy.wait(1000);\ncy.get(':nth-child(4) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(credentials.password, {\n  force: true\n});\ncy.get(':nth-child(5) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(credentials.password, {\n  force: true\n});\ncy.get('#toggleAddBalance').click({\n  force: true\n});\ncy.get('button[class=\"style__ContainerButton-sc-1wsixal-0 CMabB button__child\"]').click({\n  force: true\n});\ncy.get('.kOeYBn > .input__warging').contains('Formato inválido').should('exist');",
+              "err": {},
+              "uuid": "fde288b5-5d05-47fa-af44-8d0bef52c5b4",
+              "parentUUID": "67ebf603-3549-431f-a99b-d2e7e0014979",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT09 - Cadastro realizado com sucesso, preenchendo todos os campos obrigatórios",
+              "fullTitle": "Acesso a página do bugbank CT09 - Cadastro realizado com sucesso, preenchendo todos os campos obrigatórios",
+              "timedOut": null,
+              "duration": 6976,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.ihdmxA').click();\ncy.wait(1000);\ncy.get('input[placeholder=\"Informe seu e-mail\"]').eq(1).type(credentials.email, {\n  force: true\n});\ncy.get('input[placeholder=\"Informe seu Nome\"]').type('Danielle', {\n  force: true\n});\ncy.wait(1000);\ncy.get(':nth-child(4) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(credentials.password, {\n  force: true\n});\ncy.get(':nth-child(5) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(credentials.password, {\n  force: true\n});\ncy.get('#toggleAddBalance').click({\n  force: true\n});\ncy.get('button[class=\"style__ContainerButton-sc-1wsixal-0 CMabB button__child\"]').click({\n  force: true\n});\ncy.get('.styles__ContainerContent-sc-8zteav-1').should('exist');\ncy.get('#btnCloseModal').click();",
+              "err": {},
+              "uuid": "280afe84-2f16-4a3d-9076-6c08e2b83c01",
+              "parentUUID": "67ebf603-3549-431f-a99b-d2e7e0014979",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CT08 - Login realizado com sucesso, preenchendo todos os campos obrigatórios",
+              "fullTitle": "Acesso a página do bugbank CT08 - Login realizado com sucesso, preenchendo todos os campos obrigatórios",
+              "timedOut": null,
+              "duration": 8320,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.ihdmxA').click();\ncy.wait(1000);\ncy.get('input[placeholder=\"Informe seu e-mail\"]').eq(1).type(credentials.email, {\n  force: true\n});\ncy.get('input[placeholder=\"Informe seu Nome\"]').type('Danielle', {\n  force: true\n});\ncy.wait(1000);\ncy.get(':nth-child(4) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(credentials.password, {\n  force: true\n});\ncy.get(':nth-child(5) > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(credentials.password, {\n  force: true\n});\ncy.get('#toggleAddBalance').click({\n  force: true\n});\ncy.get('button[class=\"style__ContainerButton-sc-1wsixal-0 CMabB button__child\"]').click({\n  force: true\n});\ncy.get('.styles__ContainerContent-sc-8zteav-1').should('exist');\ncy.get('#btnCloseModal').click();\ncy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > :nth-child(1) > .input__default').type(credentials.email);\ncy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > .login__password > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type(credentials.password);\ncy.get('.otUnI').click();\ncy.url().should('eq', 'https://bugbank.netlify.app/home');",
+              "err": {},
+              "uuid": "80a3399f-70f5-4b19-a2cb-a80460c892bb",
+              "parentUUID": "67ebf603-3549-431f-a99b-d2e7e0014979",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ec838ba-0692-443e-a100-3fc873cb0886",
+            "3f02bb36-f6aa-40c1-ba93-ba27647e908f",
+            "93cb3730-2344-4f7f-bad0-eb97d4f81e2c",
+            "21949527-b8bb-444c-b45c-a31e3692f64c",
+            "fde288b5-5d05-47fa-af44-8d0bef52c5b4",
+            "280afe84-2f16-4a3d-9076-6c08e2b83c01",
+            "80a3399f-70f5-4b19-a2cb-a80460c892bb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 42506,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reporterDir": "cypress/reports/mochawesome-reporter",
+        "overwrite": true,
+        "html": true,
+        "video": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
